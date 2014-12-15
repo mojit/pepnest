@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dunbot</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="dashboard">
+
+    <header>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Dunbot</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <ul class="nav navbar-top-links navbar-right">
+                <li><a href="#">jit@pepnest.com</a></li>
+                <li><a href=""><i class="fa fa-user"></i></a></li>
+            </ul>
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#"><i class="fa fa-bell fa-fw"></i> In-app notifications</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-envelope fa-fw"></i> Dunning Emails <i class="fa fa-angle-down fa-fw pull-right"></i></a>
+                            <ul class="nav sub-nav">
+                                <li>
+                                    <a href="#">Pre-dunning</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dunning</a>
+                                </li>
+                                <li>
+                                    <a href="#">Failed</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+        </nav>
+    </header>
+    <section id="dashboard-panel">
+        <h3>Pre-dunning Email</h3>
+        <p>Set an email to notify customer 4-days prior to card expiry</p>
+        <hr>
+        <div class="email">
+            <form role="form">
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" id="subject" placeholder="Subject line">
+              </div>
+              <div class="form-group">
+                <label for="message1">Message</label>
+                <textarea class="form-control" id="message1" rows="5"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.0.js"></script>
+    
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.steps.js"></script>
+    <script src="js/spectrum.js"></script>
+    <script src="js/dunbot.js"></script>
+</body>
+
+</html>

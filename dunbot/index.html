@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Stop losing customers to failed charges. Dunbot automatically notifies your customers when their credit card is going to expire with emails and on-site notifications. Sign up today to get started.">
+    <meta name="author" content="">
+
+    <title>Stripe Dunning Notifications - Dunbot</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+     <link rel="icon" 
+      type="image/png" 
+      href="img/fav.png">
+
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56957061-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+    <header>
+        <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container nav-container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo" href="index.html"><img src="img/dunbot_logo.png"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#features">Features</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#pricing">Pricing</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#signup">Sign up</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+        <div class="container">
+            
+            <div class="banner">
+                <h1 class="title">Prevent failed charged, keep more customers</h1>
+                <h3 class="subtitle">On-site and email dunning for <img src="img/stripel.jpeg"></h4>
+                <img src="img/2.gif" class="img-banner">
+                <div class="signupbeta">
+                    <p>Reduce your churn rate in 10 minutes</p>
+                    <form class="form-inline" role="form" action="//marketibles.us5.list-manage.com/subscribe/post?u=769ef4464207729b626fa8755&amp;id=64dbd0181b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                      <div class="form-group" id="mc_embed_signup_scroll">
+                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                        <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter email" required>
+                         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;"><input type="text" name="b_769ef4464207729b626fa8755_64dbd0181b" tabindex="-1" value=""></div>
+                      </div>
+                      <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-beta">Request early access</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="slidr">
+        <div class="container">
+            <div class="slidr">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="inner">
+                            <div data-role="fieldcontain">
+                                <div class="slidelabel">How many monthly customers do you have?</div>
+                                <input type="range" name="slider11" id="slider11" value="1000" min="0" max="10000" data-highlight="true"/>
+
+                            </div>
+                            <div data-role="fieldcontain" class="saved_cust">
+                                <span>You can retain</span>
+                                <input id="_mainpageOutput" value="30" autocomplete="off" disabled/> 
+                                <span>more customers per month with Dunbot</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>On average, 3% of customers credit cards expire every month</p>
+            </div>
+        </div>
+    </section>
+    <section id="hiw">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="hiw">
+                        <h2 class="sectitle">How it works</h2>
+                        <div class="row hiw-row">
+                            <div class="col-sm-3 ">
+                                <div class="cell">
+                                <div class="icon"><img src="img/1.png" class=""></div>
+                                <h4>Connect to your Stripe account with one-click</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 ">
+                                <div class="cell">
+                                <div class="icon"><img src="img/2.png" class=""></div>
+                                <h4>Add the Dunbot code snippet to your website</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 ">
+                                <div class="cell">
+                                <div class="icon"><img src="img/3.png" class=""></div>
+                                <h4>Customize your notifications preferences and timing</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="cell">
+                                <div class="icon"><img src="img/4.png" class=""></div>
+                                <h4>Dunbot notifies customers with emails and on-site messages</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="features">
+                        <h2 class="sectitle">Features</h2>
+                        <div class="row feature-row">
+                            <div class="col-sm-4 ">
+                                <div class="cell">
+                                <div class="icon"><i class="fa fa-cc-stripe fa-4x"></i></div>
+                                <h4>One-click integration with your Stripe account.</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 ">
+                                <div class="cell">
+                                <div class="icon"><i class="fa fa-code fa-4x"></i></div>
+                                <h4>Add Dunbot code to your website in 5 minutes</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 ">
+                                <div class="cell">
+                                <div class="icon"><i class="fa fa-bell fa-4x"></i></div>
+                                <h4>Dunbot automatically notifies customers with expiring credit cards and failed charges.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row feature-row">
+                            <div class="col-sm-4 col-sm-offset-2 ">
+                                <div class="cell">
+                                <div class="icon"><i class="fa fa-cogs fa-4x"></i></div>
+                                <h4>Customize the design and timing of your dunning emails.</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="cell">
+                                <div class="icon"><i class="fa fa-dashboard fa-4x"></i></div>
+                                <h4>Track customers and revenue saved in your dashboard.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="pricing">
+        <div class="pricing">
+            <div class="container">
+                <h2 class="sectitle">Pricing</h2>
+                <p class="sebsubt">Risk free, <strong>60-day money back guarantee</strong></p>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="pricing-box price1box">
+                            <div class="plan plan1">
+                                Bootstrap
+                            </div>
+                            <div class="up price1">
+                                <span class="price text">Free</span>
+                            </div>
+                            <div class="down price1">
+                                <div class="cust">
+                                    <span class="ncust">200</span>
+                                    <span class="tcust">Customers</span>
+                                </div>
+                                <span class="features"><i class="fa fa-check fa-fw"></i>On-site dunning notifications</span>
+                                <span class="features"><i class="fa fa-check fa-fw"></i>Automated dunning emails</span>
+                                <span class="features"><i class="fa fa-check fa-fw"></i>Email Support</span>
+                                <span class="features"><i class="fa fa-close fa-fw"></i>Phone Support</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="pricing-box price2box">
+                            <div class="plan plan2">
+                                Start Up
+                            </div>
+                            <div class="up price2">
+                                <span class="price"><sup>$</sup>79</span>
+                                <span class="period">per month</span>
+                            </div>
+                            <div class="down price2">
+                                <div class="cust">
+                                    <span class="ncust">1,000</span>
+                                    <span class="tcust">Customers</span>
+                                </div>
+                                <span class="features"><i class="fa fa-check fa-fw"></i>On-site dunning notifications</span>
+                                <span class="features"><i class="fa fa-check fa-fw"></i>Automated dunning emails</span>
+                                <span class="features"><i class="fa fa-check fa-fw"></i>Email Support</span>
+                                <span class="features"><i class="fa fa-close fa-fw"></i>Phone Support</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="pricing-box price3box">
+                            <div class="plan plan3">
+                                Growth
+                            </div>
+                            <div class="up price3">
+                                <span class="price"><sup>$</sup>149</span>
+                                <span class="period">per month</span>
+                            </div>
+                            <div class="down price3">
+                                <div class="cust">
+                                    <span class="ncust">5,000</span>
+                                    <span class="tcust">Customers</span>
+                                </div>
+                                <span class="features"><i class="fa fa-check fa-fw"></i>On-site dunning notifications</span>
+                                <span class="features"><i class="fa fa-check fa-fw"></i>Automated dunning emails</span>
+                                <span class="features"><i class="fa fa-check fa-fw"></i>Email Support</span>
+                                <span class="features"><i class="fa fa-check fa-fw"></i>Phone Support</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="pricing-box price4box">
+                            <div class="plan plan4">
+                                Business
+                            </div>
+                            <div class="up price4">
+                                <span class="price text">Contact Us</span>
+                            </div>
+                            <div class="down price4">
+                                <div class="cust">
+                                    <span class="ncust">10,000</span>
+                                    <span class="tcust">Customers</span>
+                                </div>
+                                <span class="features"><i class="fa fa-check fa-fw"></i>On-site dunning notifications</span>
+                                <span class="features"><i class="fa fa-check fa-fw"></i>Automated dunning emails</span>
+                                <span class="features"><i class="fa fa-check fa-fw"></i>Email Support</span>
+                                <span class="features"><i class="fa fa-check fa-fw"></i>Phone Support</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="morecust">Have more than 10,000 monthly customers? <a href="mailto:coreyrab@dunbot.com">Send us an email.</a></p>
+            </div>
+        </div>
+    </section>
+    <div class="signupbeta" id="signup">
+        <div class="container text-center">
+                    <p>Stop losing customers to failed charges</p>
+                    <form class="form-inline" role="form">
+                      <div class="form-group">
+                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+                      </div>
+                      <button type="submit" class="btn btn-beta">Request early access</button>
+                    </form>
+        <br>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="https://twitter.com/thedunbot" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li>Copyright 2014 Dunbot. All Rights Reserved</li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="mailto:coreyrab@gmail.com">Contact us</a></li>
+        </ul>
+    </footer>
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/dunbot.js"></script>
+
+<script>
+
+                //Bad Implementation:  This is what I originally had:
+                $(document).ready(function()
+                  {
+                       //window.alert('uncomment me and I will work');
+                        $('#slider11').change(function() {
+                            
+                            var num = $('#slider11').val()*0.03;
+                            var n = num.toFixed(0); 
+                            $('#_mainpageOutput').val(n);
+                        }
+                        );
+                        
+                  });
+
+        </script>  
+</body>
+
+</html>
