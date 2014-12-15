@@ -1,4 +1,4 @@
 Pepnest
 ===============
 
-SOme cool responsive theme developed using twitter Bootstrap
+Some cool responsive themes developed using twitter Bootstrap
