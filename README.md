@@ -1,4 +1,4 @@
-pepnest_academy
+Pepnest
 ===============
 
-One page responsive website
+SOme cool responsive theme developed using twitter Bootstrap
