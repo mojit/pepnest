@@ -1,0 +1,24 @@
+$brown: #61210f;
+$lightgray: #E2DFDE;
+$darkgray: #908B7F;
+$red: #ea2b1f;
+$yellow: #ff9f1c;
+$lightred: lighten(#fcf5e3, 3%);
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+@if $inset {
+-webkit-box-shadow:inset $top $left $blur $color;
+-moz-box-shadow:inset $top $left $blur $color;
+box-shadow:inset $top $left $blur $color;
+} @else {
+-webkit-box-shadow: $top $left $blur $color;
+-moz-box-shadow: $top $left $blur $color;
+box-shadow: $top $left $blur $color;
+}
+}
